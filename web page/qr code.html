@@ -1,0 +1,26 @@
+  <html>
+<head>
+	<script src="http://code.img2imp.com/cdn/i2i_qrcode.min.js"></script>
+</head>
+<body>
+	<input type="text"  id="qrinput" placeholder="Enter text or URL">
+	<button type="button" onclick="getqrcode()">QR Code</button>
+	<center><div id="myqrdiv"></div></center>
+
+<script>
+function getqrcode(){
+	var myinput = document.getElementById("qrinput").value;
+	var qrcode = new QRCode("myqrdiv", {
+    	text:myinput ,
+    	width: 128,
+    	height: 128,
+    	colorDark : "#000000",
+    	colorLight : "#ffffff",
+    	correctLevel : QRCode.CorrectLevel.H
+	});
+}
+</script>
+
+</body>
+</html>
+      
